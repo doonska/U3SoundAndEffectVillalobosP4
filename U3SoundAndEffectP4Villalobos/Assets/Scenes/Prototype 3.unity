@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a8305dfc0b13d43be33239b0803d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 0}
+  obstaclePrefab: {fileID: 617730806}
 --- !u!4 &81848485
 Transform:
   m_ObjectHideFlags: 0
@@ -419,6 +419,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &617730806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3090588278793427733, guid: ea1e2152c79c7f3448063949f5f84972, type: 3}
+  m_PrefabInstance: {fileID: 4000453823164032589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &835818919
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +435,8 @@ GameObject:
   - component: {fileID: 835818921}
   - component: {fileID: 835818920}
   - component: {fileID: 835818922}
+  - component: {fileID: 835818924}
+  - component: {fileID: 835818923}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -516,6 +523,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5932f0a1e3bfdd4fbb2eee65b015cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &835818923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835818919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 112.79999, y: 18.781641, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &835818924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835818919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f14e316f3f5e2479460e291510f4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1020480521 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100066, guid: 4a7c3ad7168bb834b87a91e3f94ad3d6, type: 3}
@@ -584,6 +624,7 @@ MonoBehaviour:
   jumpForce: 20
   gravityModifier: 5
   isOnGround: 1
+  gameOver: 0
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +639,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -699,6 +740,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3090588278793427733, guid: ea1e2152c79c7f3448063949f5f84972, type: 3}
       propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090588278793427733, guid: ea1e2152c79c7f3448063949f5f84972, type: 3}
+      propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3232427375907111306, guid: ea1e2152c79c7f3448063949f5f84972, type: 3}
